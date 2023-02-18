@@ -1,0 +1,32 @@
+.display-user-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.userName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.brand {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  flex: 2;
+}
+
+@media screen and (max-width: 400px) {
+  .display-user-data {
+    display: none;
+  }
+
+  .brand {
+    font-size: 1.5rem;
+  }
+}
