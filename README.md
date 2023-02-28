@@ -29,12 +29,16 @@ Do the following steps after cloning the repository:
   -get the CLIENT_ID and note it
   -then generate CLIENT_SECRET and note it
 
-3. Create .env file on your project directory
+3. Create .env file on ./backend folder and .env.local file on ./client folder respectively
 
-- 3.1paste the following
-- 3.2 REACT_APP_API_KEY = <your-API-key>
-- 3.3 CLIENT_ID= <your_client_id>
-- 3.4 CLIENT_SECRET= <your_client_secret>
+- @backend folder .env file, paste the following:
+- 3.1 REACT_APP_GITHUB_OAUTH_CLIENT_ID = <your-GITHUB_OAUTH_CLIENT_ID>
+- 3.2 REACT_APP_GITHUB_OAUTH_CLIENT_SECRET = <your-GITHUB_OAUTH_CLIENT_SECRET>
+- 3.3 REACT_APP_GITHUB_OAUTH_REDIRECT_URL = http://localhost:4000/api/sessions/oauth/github
+
+- @clien folder .env.local file, paste the following:
+- 3.4 REACT_APP_API_KEY = <your-openweather-API_KEY>
+- 3.5 REACT_APP_GITHUB_OAUTH_CLIENT_ID = <your-GITHUB_OAUTH_CLIENT_ID>
 
 - 3.5 then save it
 
