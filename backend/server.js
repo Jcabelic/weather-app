@@ -9,8 +9,8 @@ const { request } = require("express");
 require("dotenv").config();
 
 // create an env file and add the client id and client secret from Github API
-const CLIENT_ID = process.env.CLIENT_ID;
-const CLIENT_SECRET = process.env.CLIENT_SECRET;
+const CLIENT_ID = process.env.REACT_APP_GITHUB_OAUTH_CLIENT_ID;
+const CLIENT_SECRET = process.env.REACT_APP_GITHUB_OAUTH_CLIENT_SECRET;
 
 const app = express();
 
@@ -66,6 +66,7 @@ app.get("/getUserData", async function (req, res) {
     .then((data) => {
       console.log(data);
       res.json(data);
+      console.log(data); //this is the data we are sending to the frontend
     });
 });
 
