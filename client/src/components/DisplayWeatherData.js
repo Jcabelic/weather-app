@@ -22,7 +22,7 @@ const DisplayWeatherData = () => {
         setCity("");
       });
 
-    console.log(process.env.REACT_APP_API_KEY);
+    // console.log(process.env.REACT_APP_API_KEY);
   };
   return (
     <div className="searchCity">
@@ -41,9 +41,11 @@ const DisplayWeatherData = () => {
               value={city}
             />
           </div>
-          <button className="btn" onClick={getWeather}>
-            Display Weather Data
-          </button>
+          <div className="display-weather-data-btn">
+            <button className="btn" onClick={getWeather}>
+              Display Weather Data
+            </button>
+          </div>
         </div>
       ) : (
         <div className="location-weather-data">
@@ -68,7 +70,8 @@ const DisplayWeatherData = () => {
               {Math.round(weatherData.main.temp)}°C
             </div>
             <div className="grid-item grid-item-9">
-              {weatherData.weather[0].description}
+              {weatherData.weather[0].description.charAt(0).toUpperCase() +
+                weatherData.weather[0].description.slice(1)}
             </div>
             <div className="grid-item grid-item-10">
               {weatherData.weather[0].main}
@@ -80,10 +83,11 @@ const DisplayWeatherData = () => {
               {weatherData.main.humidity}
             </div>
           </div>
-
-          <button className="back-btn" onClick={handleClick}>
-            Back
-          </button>
+          <div>
+            <button className="back-btn" onClick={handleClick}>
+              Back
+            </button>
+          </div>
         </div>
       )}
     </div>

@@ -1,4 +1,5 @@
 .landing-page-header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,7 +28,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 0 auto;
+  margin-bottom: 50px;
 }
 .landing-page-body-brand {
   font-size: 2rem;
@@ -50,7 +51,12 @@
   font-weight: 500;
 }
 
+.get-started {
+  margin-bottom: 50px;
+}
+
 .cssbuttons-io-button {
+  margin-bottom: 50px;
   background: #84e7f8;
   color: white;
   font-family: inherit;
